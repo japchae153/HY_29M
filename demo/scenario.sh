@@ -31,10 +31,11 @@ geo 127.218579 38.2052
 sleep 6
 put "lights?feature=headlamp_mode&value=LowBeam"; put "gear?gear=Drive"
 for s in 30 50 70; do put "controls?speed=$s&accelerator=40&brake=0"; sleep 1; done
-drive_north 127.218579 38.2056 6 0.00025        # 하향등 70km/h → 경고(조명 호박색 + 음성 1회)
+drive_north 127.218579 38.2056 16 0.00012       # 하향등 70km/h → 300m 안에서 경고(조명 호박색 + 음성 1회), 음성이 끝날 때까지 계속 접근
 say "상향등 켬 → 보이는 거리 79m > 멈추는 거리 47m → 경고 해제, 조명 원래 색"
 put "lights?feature=high_beam&value=true"
-drive_north 127.218579 38.2071 5 0.00025
+drive_north 127.218579 38.2075 6 0.00012
+sleep 3
 put "controls?speed=0&accelerator=0&brake=60"; sleep 1      # 정차한 뒤 상향등을 끈다(지점 앞에서 끄면 다시 경고)
 put "lights?feature=high_beam&value=false"
 
@@ -43,13 +44,14 @@ say "장면 2 — 비 오는 밤, 충남 태안군 백화로 집중조명이 없
 geo 126.3077 36.755341; sleep 2
 put "body?front_wiper=Low"
 for s in 30 50; do put "controls?speed=$s&accelerator=30&brake=0"; sleep 1; done
-drive_east 126.3080 36.755341 7 0.0003         # 와이퍼 작동 50km/h → 젖은 노면 38m > 29m → 경고
+drive_east 126.3080 36.755341 16 0.00015       # 와이퍼 작동 50km/h → 젖은 노면 38m > 29m → 경고, 음성이 끝날 때까지 계속 접근
 say "감속 30km/h → 경고 해제"
 put "controls?speed=30&accelerator=0&brake=30"
-drive_east 126.3101 36.755341 4 0.0002
+drive_east 126.31025 36.755341 6 0.0001
+sleep 3
 
 say "장면 3 — 도착, P단: 오늘 밤 보이는 거리보다 빨랐던 곳"
 put "controls?speed=0&accelerator=0&brake=100"; sleep 2
 put "gear?gear=Park"; put "body?front_wiper=Off"
-sleep 6
+sleep 12
 say "끝"
