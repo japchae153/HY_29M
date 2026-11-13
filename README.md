@@ -121,4 +121,4 @@ demo/         시연 시나리오
 
 ## 시연 영상
 
-접수 메일에 첨부했습니다(2분 53초). 앞 약 80초는 내레이션으로 문제와 동작 원리를 설명하고, 뒤는 Pleos Connect 에뮬레이터 실제 화면 3장면입니다. 에뮬레이터 소리는 녹화되지 않아서 앱이 말한 문장을 macOS 음성으로 다시 읽었습니다. 배경음악은 "Wallpaper" Kevin MacLeod (incompetech.com), CC BY 4.0입니다.
+접수 메일에 첨부했습니다(2분 53초). 앞 약 80초는 내레이션으로 문제와 동작 원리를 설명하고, 뒤는 Pleos Connect 에뮬레이터 실제 화면 3장면입니다. 배경음악은 "Wallpaper" Kevin MacLeod (incompetech.com), CC BY 4.0입니다.
